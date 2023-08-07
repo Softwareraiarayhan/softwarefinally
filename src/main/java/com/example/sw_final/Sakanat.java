@@ -3,8 +3,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Sakanat {
+    public static   int ww=0;
 
-     protected static final List<HouseClass> house1 = new ArrayList<>();
+    public static   int M=0;
+
+    protected static final List<HouseClass> house1 = new ArrayList<>();
     protected   static final List<AdminClass> admin1 = new ArrayList<>();
     protected   static final List<OwnerClass> owner1 = new ArrayList<>();
     protected   static final List<TenantClas> tenant1 = new ArrayList<>();
@@ -25,8 +28,9 @@ public static void addhouse()
     h1.setPrice(Integer.parseInt("650"));
     h1.setBalcony(Integer.parseInt("3"));
     h1.setBedroom(Integer.parseInt("3"));
-    h1.setBedroom(Integer.parseInt("3"));
+    h1.setBathroom(Integer.parseInt("3"));
     h1.setNumberhouse(Integer.parseInt("1102230"));
+    h1.setaccepted(true);
     house1.add(h1);
 
     HouseClass h2=new HouseClass();
@@ -36,8 +40,9 @@ public static void addhouse()
     h2.setPrice(Integer.parseInt("700"));
     h2.setBalcony(Integer.parseInt("1"));
     h2.setBedroom(Integer.parseInt("4"));
-    h2.setBedroom(Integer.parseInt("4"));
+    h2.setBathroom(Integer.parseInt("4"));
     h2.setNumberhouse(Integer.parseInt("1101180"));
+    h2.setaccepted(true);
     house1.add(h2);
 }
 
@@ -96,8 +101,6 @@ public static void addhouse()
         h2.setUsername("Ghaith abdullah");
         tenant1.add(h2);
     }
-
-
 
 
 }

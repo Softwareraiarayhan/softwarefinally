@@ -98,6 +98,4 @@ public class HouseClass {
         this.showed = showed;
     }
 
-
-
 }

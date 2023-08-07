@@ -1,4 +1,5 @@
 package com.example.SW_finalTest;
+import com.example.sw_final.requestcontroll;
 
 import com.example.sw_final.AdminControll;
 import com.example.sw_final.LoginControl1;
@@ -20,11 +21,12 @@ public class request {
     }
     @When("clicks on the accept button")
     public void clicksOnTheAcceptButton() {
-
+    assertEquals(true, AdminControll.isaccept2==true&&AdminControll.isaccept==false);
     }
 
     @When("clicks on the reject button")
     public void clicksOnTheRejectButton() {
+        assertEquals(false, AdminControll.isaccept2==false&&AdminControll.isaccept==true);
 
     }
     @When("the system updates the status of the request to {string}")

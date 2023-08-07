@@ -8,8 +8,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "case", monochrome= true,
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         glue= {"com.example.SW_finalTest"})
-
-
 public class acceptanceTest {
 
 }

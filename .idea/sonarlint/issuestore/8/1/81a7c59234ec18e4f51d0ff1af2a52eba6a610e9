@@ -1,0 +1,17 @@
+
+o
+java:S1104"TMake typeuser a static final constant or non-public and provide accessors if needed.(…ÚŸİúÿÿÿÿ
+I
+java:S1444".Make this "public static typeuser" field final(…ÚŸİúÿÿÿÿ
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(Œ¬³ñÿÿÿÿÿ
+B
+java:S1125&"'Remove the unnecessary boolean literal.(ÑûØ†şÿÿÿÿ
+=
+java:S11250"'Remove the unnecessary boolean literal.(ûÅŸ
+m
+java:S37768"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ª©±ûÿÿÿÿ
+=
+java:S1125K"'Remove the unnecessary boolean literal.(Ó®Ö
+=
+java:S1125\"'Remove the unnecessary boolean literal.(Ó®Ö

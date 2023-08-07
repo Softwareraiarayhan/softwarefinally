@@ -11,7 +11,8 @@ import static com.example.sw_final.AddHousecontrol.logger;
 
 public  class LoginControl1 {
     public static boolean loginclicked=true;
-
+public static boolean adminlogin=false;
+    public static boolean adminlogin1=true;
 
     @FXML
    private    RadioButton adminRadio;
@@ -47,6 +48,7 @@ else {
                    TESTLOGIN.fun(1);
                    if (TESTLOGIN.userNametest(username.getText()) && TESTLOGIN.passWordtest(password.getText())) {
                        NextPage.make("adminpage.fxml", "Admin Page");
+                       adminlogin=true;
                    }
 
                } else if (ownerRadio.isSelected()) {

@@ -2,7 +2,6 @@ package com.example.sw_final;
 
 public class TenantClas
 {
-
     private String username;
     private   String password;
     private  String gender;
@@ -64,7 +63,6 @@ private  String universityMajors;
     public String getUniversityMajors() {
         return universityMajors;
     }
-
     public void setUniversityMajors(String universityMajors) {
         this.universityMajors = universityMajors;
     }

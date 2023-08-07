@@ -3,9 +3,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Sakanat {
-    public static   int ww=0;
+    protected  static   int ww=0;
 
-    public static   int M=0;
+    protected static   int m=0;
 
     protected static final List<HouseClass> house1 = new ArrayList<>();
     protected   static final List<AdminClass> admin1 = new ArrayList<>();
@@ -30,6 +30,7 @@ public static void addhouse()
     h1.setBedroom(Integer.parseInt("3"));
     h1.setBathroom(Integer.parseInt("3"));
     h1.setNumberhouse(Integer.parseInt("1102230"));
+    h1.setIdOwner(408895811);
     h1.setaccepted(true);
     house1.add(h1);
 
@@ -42,6 +43,7 @@ public static void addhouse()
     h2.setBedroom(Integer.parseInt("4"));
     h2.setBathroom(Integer.parseInt("4"));
     h2.setNumberhouse(Integer.parseInt("1101180"));
+    h2.setIdOwner(428678901);
     h2.setaccepted(true);
     house1.add(h2);
 }
@@ -57,6 +59,7 @@ public static void addhouse()
        h1.setUsername("Abdullah Hussain");
         owner1.add(h1);
 
+
         OwnerClass h2=new OwnerClass();
         h2.setid(428678901);
         h2.setAddress("Jenen");
@@ -65,7 +68,6 @@ public static void addhouse()
         h2.setUsername("Bader ibrahem");
         owner1.add(h2);
     }
-
     public void addadmin()
     {
 

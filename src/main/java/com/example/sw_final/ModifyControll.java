@@ -16,9 +16,9 @@ import java.io.IOException;
 import static com.example.sw_final.WelcomeControl.logger;
 
 public class ModifyControll {
-    public  static boolean ismodify=false;
-public static   boolean check=false;
-public   String temp=Sakanat.house1.get(Sakanat.M).getPicture();
+    public  static final boolean ISMODIFY=false;
+public static  final   boolean CHECKED=false;
+protected    String temp=Sakanat.house1.get(Sakanat.m).getPicture();
     @FXML
     private TextField balcony1;
 
@@ -57,16 +57,16 @@ public   String temp=Sakanat.house1.get(Sakanat.M).getPicture();
 
     @FXML
     void click(MouseEvent event) {
-        if (Sakanat.M != Sakanat.house1.size()) {
+        if (Sakanat.m!= Sakanat.house1.size()) {
 
-            location1.setText(Sakanat.house1.get(Sakanat.M).getLocation());
-            price1.setText(Sakanat.house1.get(Sakanat.M).getPrice() + "");
-            services1.setText(Sakanat.house1.get(Sakanat.M).getServices());
-            bedroom1.setText(Sakanat.house1.get(Sakanat.M).getBedroom() + "");
-            bathroom1.setText(Sakanat.house1.get(Sakanat.M).getBathroom() + "");
-            balcony1.setText(Sakanat.house1.get(Sakanat.M).getBalcony() + "");
-            house12.setText(Sakanat.house1.get(Sakanat.M).getNumberhouse()+"");
-            imigeview.setImage(new Image(Sakanat.house1.get(Sakanat.M).getPicture()));
+            location1.setText(Sakanat.house1.get(Sakanat.m).getLocation());
+            price1.setText(Sakanat.house1.get(Sakanat.m).getPrice() + "");
+            services1.setText(Sakanat.house1.get(Sakanat.m).getServices());
+            bedroom1.setText(Sakanat.house1.get(Sakanat.m).getBedroom() + "");
+            bathroom1.setText(Sakanat.house1.get(Sakanat.m).getBathroom() + "");
+            balcony1.setText(Sakanat.house1.get(Sakanat.m).getBalcony() + "");
+            house12.setText(Sakanat.house1.get(Sakanat.m).getNumberhouse()+"");
+            imigeview.setImage(new Image(Sakanat.house1.get(Sakanat.m).getPicture()));
         } else {
             try {
                 NextPage.make("adminpage.fxml", "Houses");
@@ -98,15 +98,15 @@ public   String temp=Sakanat.house1.get(Sakanat.M).getPicture();
     void modify(MouseEvent event) {
           if(checkdata()&&checkpicture())
         {
-            Sakanat.house1.get(Sakanat.M).setLocation(location1.getText());
-            Sakanat.house1.get(Sakanat.M).setPrice(Integer.parseInt(price1.getText()));
-            Sakanat.house1.get(Sakanat.M).setServices(services1.getText());
-            Sakanat.house1.get(Sakanat.M).setBedroom(Integer.parseInt(bedroom1.getText()));
-            Sakanat.house1.get(Sakanat.M).setBathroom(Integer.parseInt(bathroom1.getText()));
-            Sakanat.house1.get(Sakanat.M).setBalcony(Integer.parseInt(balcony1.getText()));
-            Sakanat.house1.get(Sakanat.M).setNumberhouse(Integer.parseInt(house12.getText()));
-            Sakanat.house1.get(Sakanat.M).setPicture(temp);
-            ismodify=true;
+            Sakanat.house1.get(Sakanat.m).setLocation(location1.getText());
+            Sakanat.house1.get(Sakanat.m).setPrice(Integer.parseInt(price1.getText()));
+            Sakanat.house1.get(Sakanat.m).setServices(services1.getText());
+            Sakanat.house1.get(Sakanat.m).setBedroom(Integer.parseInt(bedroom1.getText()));
+            Sakanat.house1.get(Sakanat.m).setBathroom(Integer.parseInt(bathroom1.getText()));
+            Sakanat.house1.get(Sakanat.m).setBalcony(Integer.parseInt(balcony1.getText()));
+            Sakanat.house1.get(Sakanat.m).setNumberhouse(Integer.parseInt(house12.getText()));
+            Sakanat.house1.get(Sakanat.m).setPicture(temp);
+
         }
          else  JOptionPane.showMessageDialog(null,"Data you entered is unvalid ","errorMassage",JOptionPane.ERROR_MESSAGE);
 
@@ -114,8 +114,8 @@ public   String temp=Sakanat.house1.get(Sakanat.M).getPicture();
 
     @FXML
     void next(MouseEvent event) {
-        if (Sakanat.M != Sakanat.house1.size()) {
-            Sakanat.M++;
+        if (Sakanat.m != Sakanat.house1.size()) {
+            inceamentM ();
             try {
                 NextPage.make("modify.fxml", "Houses");
             } catch (IOException e) {
@@ -126,16 +126,19 @@ public   String temp=Sakanat.house1.get(Sakanat.M).getPicture();
 
     }
 
-
+public static void inceamentM ()
+{
+    Sakanat.m++;
+}
 
 
     public  boolean checkdata() {
 
         if(TESTINPUT.houseServicesTest(services1.getText())&&TESTINPUT.priceTest(price1.getText())&&TESTINPUT.houseBedroomTest(bedroom1.getText()) &&TESTINPUT.houseBathroomTest(bathroom1.getText())&&TESTINPUT.houseBalconyTest(balcony1.getText()))
         {
-            if(Sakanat.house1.get(Sakanat.M).getNumberhouse()==Integer.parseInt(house12.getText()))
+            if(Sakanat.house1.get(Sakanat.m).getNumberhouse()==Integer.parseInt(house12.getText()))
             {
-                check=true;
+
                 return true;
             }
             else  return TESTINPUT.houseNumbertest(house12.getText());
@@ -143,7 +146,7 @@ public   String temp=Sakanat.house1.get(Sakanat.M).getPicture();
         return  false;
     }
     public  boolean  checkpicture() {
-        if(temp.equals(Sakanat.house1.get(Sakanat.M).getPicture()))
+        if(temp.equals(Sakanat.house1.get(Sakanat.m).getPicture()))
             return  true;
         for(int i=0;i<Sakanat.house1.size();i++)
         {
@@ -152,12 +155,10 @@ public   String temp=Sakanat.house1.get(Sakanat.M).getPicture();
         }
         return  true;
     }
-    public static  boolean ismodify()
+    public static  boolean isModifyTEST()
     {
-        if(!ismodify)
-            return true;
+     return   !ISMODIFY;
 
-        return false;
     }
 
 

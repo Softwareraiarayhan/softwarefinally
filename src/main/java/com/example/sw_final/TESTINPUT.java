@@ -52,8 +52,6 @@ public  class TESTINPUT {
             return true;
         return TESTINPUT.priceTest(string2);
     }
-
-
     public static boolean houseNumbertest(String string2) {
         boolean f=false;
 
@@ -63,7 +61,6 @@ public  class TESTINPUT {
 
 return f;
     }
-
 
     public static boolean testfail(String string, String string2)
     {

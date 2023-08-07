@@ -2,7 +2,6 @@ package com.example.sw_final;
         import javafx.fxml.FXML;
         import javafx.fxml.Initializable;
         import javafx.scene.control.Label;
-        import javafx.scene.control.TextField;
         import javafx.scene.image.Image;
         import javafx.scene.image.ImageView;
         import javafx.scene.layout.VBox;
@@ -11,54 +10,69 @@ package com.example.sw_final;
         import java.net.URL;
         import java.util.ResourceBundle;
 public class HouseListController implements Initializable {
-
+    VBox houseBox;
+    HouseClass house1;
+    ImageView imageView;
     @FXML
     private VBox houseContainer;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // Call the method to populate house information in the VBox
+
         populateHouses();
     }
 
     private void populateHouses() {
-        // Clear any previous content in the VBox
+
         houseContainer.getChildren().clear();
 
-        // Iterate over the list of houses in the sakanat class
-        for (HouseClass house : Sakanat.house1) {
-            {
-           if(house.getaccepted()) {
-               // Create a VBox to hold the house information
-               VBox houseBox = new VBox();
-               houseBox.setSpacing(5);
+        for (  HouseClass house: Sakanat.house1) {
+            house1 = house;
+            createimge() ;
 
-               // Create an ImageView for the house image
-               ImageView imageView = new ImageView();
-               try {
-                   Image image = new Image(new FileInputStream(house.getPicture()));
-                   imageView.setImage(image);
-                   imageView.setFitWidth(200); // Set image width (adjust as needed)
-                   imageView.setPreserveRatio(true);
-               } catch (FileNotFoundException e) {
-                   e.printStackTrace();
-               }
-               // Create labels to display house information
-               Label houseNumberLabel = new Label("House Number: " + house.getNumberhouse());
-               Label locationLabel = new Label("Location: " + house.getLocation());
-               Label priceLabel = new Label("Price: $" + house.getPrice());
-               Label servicesLabel = new Label("Services: " + house.getServices());
-               Label balconyLabel = new Label("Balcony: " + house.getBalcony());
-               Label bedroomLabel = new Label("Bedroom: " + house.getBedroom());
+        }
 
-               // Add the image and labels to the VBox
-               houseBox.getChildren().addAll(
-                     imageView, houseNumberLabel, locationLabel, priceLabel,
-                       servicesLabel, balconyLabel, bedroomLabel
-               );
-
-               // Add the VBox to the main houseContainer VBox
-               houseContainer.getChildren().add(houseBox);
-           }}}
     }
+
+
+
+
+    public  void createimge() {
+        if (house1.getaccepted()) {
+            houseBox = new VBox();
+            houseBox.setSpacing(5);
+            imageView = new ImageView();
+            try {
+                Image image = new Image(new FileInputStream(house1.getPicture()));
+                imageView.setImage(image);
+                imageView.setFitWidth(200);
+                imageView.setPreserveRatio(true);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            setlabel();
+            houseContainer.getChildren().add(houseBox);
+        }
+    }
+
+
+    public void setlabel()
+    {
+        // Create labels to display house information
+        Label houseNumberLabel = new Label("House Number: " + house1.getNumberhouse());
+        Label locationLabel = new Label("Location: " + house1.getLocation());
+        Label priceLabel = new Label("Price: $" + house1.getPrice());
+        Label servicesLabel = new Label("Services: " + house1.getServices());
+        Label balconyLabel = new Label("Balcony: " + house1.getBalcony());
+        Label bedroomLabel = new Label("Bedroom: " + house1.getBedroom());
+
+        houseBox.getChildren().addAll(
+                imageView, houseNumberLabel, locationLabel, priceLabel,
+                servicesLabel, balconyLabel, bedroomLabel
+        );
+    }
+
+
+
 }

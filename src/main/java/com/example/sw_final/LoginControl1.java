@@ -3,16 +3,15 @@ package com.example.sw_final;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
-
 import javax.swing.*;
 import java.io.IOException;
 
 import static com.example.sw_final.AddHousecontrol.logger;
 
 public  class LoginControl1 {
-    public static boolean loginclicked=true;
-public static boolean adminlogin=false;
-    public static boolean adminlogin1=true;
+    public static  final  boolean LOGINCLCKED=true;
+public static  final  boolean ADMINLOGIN=false;
+    public static final boolean  ADMINLOGIN1=true;
 
     @FXML
    private    RadioButton adminRadio;
@@ -44,38 +43,54 @@ void  loginbutton(MouseEvent event) {
            if(username.getText().isEmpty()||password.getText().isEmpty())
                JOptionPane.showMessageDialog(null, "User name or Password is empty ", "unvalied", JOptionPane.ERROR_MESSAGE);
 else {
-               if (adminRadio.isSelected()) {
-                   TESTLOGIN.fun(1);
-                   if (TESTLOGIN.userNametest(username.getText()) && TESTLOGIN.passWordtest(password.getText())) {
-                       NextPage.make("adminpage.fxml", "Admin Page");
-                       adminlogin=true;
-                   }
 
-               } else if (ownerRadio.isSelected()) {
-                   TESTLOGIN.fun(2);
-                   if (TESTLOGIN.userNametest(username.getText()) && TESTLOGIN.passWordtest(password.getText())) {
-                       NextPage.make("insert.fxml", "houses");
+if(adminislogin())
+    NextPage.make("adminpage.fxml", "Admin Page");
 
-                   }
-               } else if (tenantRadio.isSelected()) {
-                   TESTLOGIN.fun(3);
-
-                   if (TESTLOGIN.userNametest(username.getText()) && TESTLOGIN.passWordtest(password.getText())) {
-                       NextPage.make("Tenant.fxml", "Tenant Page");
-
-                   }
-
-
-               } else {
+else  if (ownerislogin())
+    NextPage.make("insert.fxml", "houses");
+else  if (tenentislogin())
+    NextPage.make("Tenant.fxml", "Tenant Page");
+               else {
                    JOptionPane.showMessageDialog(null, "Please select one of radio button ", "Unvalid", JOptionPane.ERROR_MESSAGE);
-
                }
 
            }
-       } catch (IOException e) {
+       }
+
+       catch (IOException e) {
            logger.log(null, "An error occurred while opening a new window:");
        }
    }
+
+  public  boolean adminislogin() {
+      if (adminRadio.isSelected()) {
+          TESTLOGIN.fun(1);
+          if (TESTLOGIN.userNametest(username.getText()) && TESTLOGIN.passWordtest(password.getText()))
+              return true;
+      }
+      return  false;
+  }
+
+
+  public boolean ownerislogin() {
+      if (ownerRadio.isSelected()) {
+          TESTLOGIN.fun(2);
+          if (TESTLOGIN.userNametest(username.getText()) && TESTLOGIN.passWordtest(password.getText()))
+              return true;
+      }
+      return  false;
+  }
+
+    public boolean tenentislogin() {
+        if (tenantRadio.isSelected()) {
+            TESTLOGIN.fun(3);
+            if (TESTLOGIN.userNametest(username.getText()) && TESTLOGIN.passWordtest(password.getText()))
+                return true;
+        }
+        return  false;
+    }
+
 
 
 

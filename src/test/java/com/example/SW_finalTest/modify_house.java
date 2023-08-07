@@ -8,27 +8,26 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import static org.junit.Assert.assertEquals;
-
 public class modify_house {
 
     @Given("I am logged in as an administrator")
     public void iAmLoggedInAsAnAdministrator() {
-        assertEquals(true, LoginControl1.adminlogin1);
+        assertEquals(true, LoginControl1.ADMINLOGIN1);
 
     }
     @Given("I have navigated to the housing data management page")
     public void iHaveNavigatedToTheHousingDataManagementPage() {
-        assertEquals(true, AdminControll.controlin);
+        assertEquals(true, AdminControll.CONTROLIN);
 
     }
     @When("I select a property to modify")
     public void iSelectAPropertyToModify() {
-        assertEquals(true, AdminControll.modifyclicked);
+        assertEquals(true, AdminControll.MODIFYCLICKED);
 
     }
     @When("I enter invalid data for one or more fields")
     public void iEnterInvalidDataForOneOrMoreFields() {
-        assertEquals(false, ModifyControll.check);
+        assertEquals(false, ModifyControll.CHECKED);
 
     }
     @Then("the changes are not saved and message show {string}")
@@ -41,7 +40,7 @@ public class modify_house {
 
     @Given("I have modified a property")
     public void iHaveModifiedAProperty() {
-        assertEquals(true,ModifyControll.ismodify());
+        assertEquals(true,ModifyControll.isModifyTEST());
 
     }
     @Then("I save the changes and message show {string}")

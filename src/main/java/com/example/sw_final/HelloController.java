@@ -13,6 +13,7 @@ import javax.swing.*;
 import java.io.File;
 
 public class HelloController {
+    public  static  int ownerid;
     String s1="Unvalied number";
 
     String temp;
@@ -99,8 +100,9 @@ public class HelloController {
                 h.setBedroom(Integer.parseInt(bedroom2.getText()));
                 h.setBedroom(Integer.parseInt(bathroom2.getText()));
                 h.setNumberhouse(Integer.parseInt(numberHouse2.getText()));
-
-                Sakanat.house1.add(h);
+h.setIdOwner(ownerid);
+System.out.println(ownerid);
+            Sakanat.house1.add(h);
                 JOptionPane.showMessageDialog(null, "done"+Sakanat.house1.get(0).getNumberhouse(), "correct", JOptionPane.PLAIN_MESSAGE);
 
             }

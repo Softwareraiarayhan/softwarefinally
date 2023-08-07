@@ -12,6 +12,7 @@ public class HouseClass {
     private int numberTenant;
     private  boolean showed;
     private  boolean accepted;
+    private  int idOwner;
     public HouseClass()
     {
 
@@ -29,6 +30,7 @@ public class HouseClass {
         this.numberTenant=0;
         this.accepted=false;
         this.showed=false;
+        this.idOwner=data.idOwner;
     }
     public String getPicture() {
         return picture;
@@ -98,4 +100,11 @@ public class HouseClass {
         this.showed = showed;
     }
 
+    public int getIdOwner() {
+        return idOwner;
+    }
+
+    public void setIdOwner(int idOwner) {
+        this.idOwner = idOwner;
+    }
 }

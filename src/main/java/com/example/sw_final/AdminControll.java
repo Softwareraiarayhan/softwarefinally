@@ -70,7 +70,12 @@ String y="Houses";
     }
     @FXML
     void reservationcheck(MouseEvent event) {
-
+        try {
+            NextPage.make("reservation.fxml", y);
+        }
+        catch (IOException e) {
+            logger.log(null, msg);
+        }
     }
 
 }

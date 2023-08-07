@@ -19,10 +19,6 @@ c
 3src/test/java/com/example/SW_finalTest/request.java,8\1\81041effb9f1a1d94b4e464e8039a37e05a7fd36
 h
 8src/test/java/com/example/SW_finalTest/modify_house.java,1\e\1ee0f3fa325543c5ffe0f226802abf19b2bf4bee
-e
-5src/main/java/com/example/sw_final/AdminControll.java,e\7\e7e55fc7881b7b56341f15b5732e404bfc3b904c
-b
-2src/main/java/com/example/sw_final/HouseClass.java,9\e\9e0cd098929a22fcb8ec8d317975dfb667ba7989
 f
 6src/main/java/com/example/sw_final/ModifyControll.java,f\b\fbe2287d2ffdbdc5718e0822c34ed8bbc53cdcea
 `

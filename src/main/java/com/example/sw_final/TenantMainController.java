@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static com.example.sw_final.WelcomeControl.logger;
+
 public class TenantMainController {
 
     @FXML
@@ -39,7 +41,8 @@ public class TenantMainController {
             stage.show();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.log(null, "error");
+
         }
     }
 }

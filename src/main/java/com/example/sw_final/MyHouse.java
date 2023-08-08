@@ -1,5 +1,4 @@
 package com.example.sw_final;
-
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -10,9 +9,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import static com.example.sw_final.WelcomeControl.logger;
-
 public class MyHouse implements Initializable{
 private  int indexhouse;
 private  String  tenantname;

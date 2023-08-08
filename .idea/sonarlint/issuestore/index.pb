@@ -13,3 +13,9 @@ h
 8src/test/java/com/example/SW_finalTest/modify_house.java,1\e\1ee0f3fa325543c5ffe0f226802abf19b2bf4bee
 I
 case/adminrequest.feature,5\b\5be17a8780725698a9d7e396f9c8eecbe9a8f954
+E
+case/feature1.feature,4\9\49df25ee44b15ec80a6d1f703a4a56f8d16a2402
+B
+case/login.feature,5\9\5910a9ecda85cfffe34bbb841cd889604ea03a20
+H
+case/modifyhouse.feature,c\6\c6fadaf9520fde2a7fe269fc326f3b4e29b3a3db

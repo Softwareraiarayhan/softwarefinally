@@ -43,7 +43,7 @@ public static  final  boolean ADMINLOGIN=false;
         LoginControl1.userlog = userlog;
     }
 
-    public static String userlog;
+    protected static String userlog;
 
 
 

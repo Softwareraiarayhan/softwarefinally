@@ -100,6 +100,7 @@ public class HelloController {
                 h.setBedroom(Integer.parseInt(bedroom2.getText()));
                 h.setBedroom(Integer.parseInt(bathroom2.getText()));
                 h.setNumberhouse(Integer.parseInt(numberHouse2.getText()));
+
 h.setIdOwner(ownerid);
             Sakanat.house1.add(h);
                 JOptionPane.showMessageDialog(null, "done"+Sakanat.house1.get(0).getNumberhouse(), "correct", JOptionPane.PLAIN_MESSAGE);

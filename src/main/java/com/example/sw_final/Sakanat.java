@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Sakanat {
     protected  static   int ww=0;
-
+String f="female";
     protected static   int m=0;
 
     protected static final List<HouseClass> house1 = new ArrayList<>();
@@ -50,7 +50,6 @@ public static void addhouse()
     house1.add(h2);
 
 
-
     HouseClass h3=new HouseClass();
     h3.setPicture("C:\\Users\\hp\\Desktop\\summer2023\\SW\\houses_picture\\house3.jpg");
     h3.setServices("water,WIFI, maintainability");
@@ -60,25 +59,11 @@ public static void addhouse()
     h3.setBedroom(Integer.parseInt("3"));
     h3.setBathroom(Integer.parseInt("4"));
     h3.setNumberhouse(Integer.parseInt("1234567"));
-    h3.setIdOwner(428678901);
+    h3.setIdOwner(1234560);
     h3.setaccepted(true);
     house1.add(h3);
 
-    HouseClass h4=new HouseClass();
-    h4.setPicture("C:\\Users\\hp\\Desktop\\summer2023\\SW\\houses_picture\\house4.jpg");
-    h4.setServices("food ,water,WIFI");
-    h4.setLocation("al dowar");
-    h4.setPrice(Integer.parseInt("350"));
-    h4.setBalcony(Integer.parseInt("1"));
-    h4.setBedroom(Integer.parseInt("3"));
-    h4.setBedroom(Integer.parseInt("4"));
-    h4.setNumberhouse(Integer.parseInt("1111111"));
-    h4.setBathroom(Integer.parseInt("4"));
-    h4.setIdOwner(428678901);
-    h4.setaccepted(true);
-    house1.add(h4);
 }
-
 
     public void addowner()
     {
@@ -90,7 +75,6 @@ public static void addhouse()
        h1.setUsername("Abdullah Hussain");
         owner1.add(h1);
 
-
         OwnerClass h2=new OwnerClass();
         h2.setid(428678901);
         h2.setAddress("Jenen");
@@ -98,6 +82,14 @@ public static void addhouse()
         h2.setPhonenumber(597257511);
         h2.setUsername("Bader ibrahem");
         owner1.add(h2);
+
+        OwnerClass h3=new OwnerClass();
+        h3.setid(1234560);
+        h3.setAddress("tell");
+        h3.setPassword("00012");
+        h3.setPhonenumber(578264125);
+        h3.setUsername("Rania sami");
+        owner1.add(h3);
     }
     public void addadmin()
     {
@@ -117,7 +109,7 @@ public static void addhouse()
         TenantClass h1=new TenantClass();
         h1.setAge(20);
         h1.setid(425968711);
-        h1.setGender("female");
+        h1.setGender(f);
         h1.setPhoneNumber(593646472);
         h1.setPassword("98765**");
         h1.setUniversityMajors("CE");
@@ -133,26 +125,26 @@ public static void addhouse()
         h2.setPassword("145236**");
         h2.setUniversityMajors("medicin");
         h2.setUsername("Ghaith abdullah");
-        h1.setBooked(false);
+        h2.setBooked(false);
         tenant1.add(h2);
 
 
         TenantClass t3=new TenantClass();
         t3.setAge(24);
         t3.setid(4322145);
-        t3.setGender("female");
+        t3.setGender(f);
         t3.setPhoneNumber(598868402);
         t3.setPassword("33");
         t3.setUniversityMajors("Industrial Engineering");
         t3.setUsername("Azhar");
-        t3.setBooked(false);
+        t3.setBooked(true);
         tenant1.add(t3);
 
 
         TenantClass t4=new TenantClass();
         t4.setAge(26);
         t4.setid(123456);
-        t4.setGender("female");
+        t4.setGender(f);
         t4.setPhoneNumber(598846622);
         t4.setPassword("22");
         t4.setUniversityMajors("electrical Engineering");
@@ -161,12 +153,11 @@ public static void addhouse()
         tenant1.add(t4);
     }
 
-
     public void addrequest()
     {
 
         AdminRequist h1=new AdminRequist();
-        h1.setHouseNum(1101230);
+        h1.setHouseNum(1234567);
         h1.setUsername("Salma abdullah");
       request.add(h1);
 

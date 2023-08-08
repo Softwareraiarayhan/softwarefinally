@@ -6,7 +6,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
@@ -54,26 +53,21 @@ public class  ReservationControl implements Initializable {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
-
             setlabel();
             houseContainer.getChildren().add(houseBox);
-
     }
-
-
     public void setlabel()
     {
-        // Create labels to display house information
+
         Label houseNumberLabel = new Label("House Number: " + Sakanat.house1.get(indexhouse).getNumberhouse());
         Label locationLabel = new Label("Location: " + Sakanat.house1.get(indexhouse).getLocation());
         Label priceLabel = new Label("Price: $" + Sakanat.house1.get(indexhouse).getPrice());
         Label servicesLabel = new Label("Services: " + Sakanat.house1.get(indexhouse).getServices());
         Label balconyLabel = new Label("Balcony: " + Sakanat.house1.get(indexhouse).getBalcony());
         Label bedroomLabel = new Label("Bedroom: " +Sakanat.house1.get(indexhouse).getBedroom());
-        Label tenantname = new Label("Tenant User name: " + Sakanat.tenant1.get(indexhouse).getUsername());
-        Label tenantmeger = new Label(" Tenant University Majors: " + Sakanat.tenant1.get(indexhouse).getUniversityMajors());
-        Label tenantphone = new Label("Tenant Phone Number: " +Sakanat.tenant1.get(indexhouse).getPhoneNumber());
-
+        Label tenantname = new Label("Tenant User name: " + Sakanat.tenant1.get(indextenant).getUsername());
+        Label tenantmeger = new Label(" Tenant University Majors: " + Sakanat.tenant1.get(indextenant).getUniversityMajors());
+        Label tenantphone = new Label("Tenant Phone Number: " +Sakanat.tenant1.get(indextenant).getPhoneNumber());
         houseBox.getChildren().addAll(
                 imageView, houseNumberLabel, locationLabel, priceLabel,
                 servicesLabel, balconyLabel, bedroomLabel,tenantname ,tenantphone,tenantmeger
@@ -84,7 +78,8 @@ public class  ReservationControl implements Initializable {
         for(int i=0;i<Sakanat.house1.size();i++)
         {
             if( house1.getHouseNum()==Sakanat.house1.get(i).getNumberhouse())
-                return i;
+            {
+           return i;}
         }
         return -1;
     }

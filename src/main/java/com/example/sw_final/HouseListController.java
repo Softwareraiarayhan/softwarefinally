@@ -23,7 +23,7 @@ public class HouseListController implements Initializable {
     @FXML
     private VBox houseContainer;
     private Button bookHouse;
-    public   static int houseNum;
+    protected    static int houseNum;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -31,6 +31,7 @@ public class HouseListController implements Initializable {
     }
     @FXML
     private void bookButtonHandls() throws RuntimeException {
+
         TenantClass tenantB = null;
 
         // Find the tenant with the matching ID

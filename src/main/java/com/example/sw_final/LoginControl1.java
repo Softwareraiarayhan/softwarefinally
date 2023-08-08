@@ -46,8 +46,6 @@ public static  final  boolean ADMINLOGIN=false;
     protected static String userlog;
 
 
-
-
     @FXML
 void  loginbutton(MouseEvent event) {
        try {

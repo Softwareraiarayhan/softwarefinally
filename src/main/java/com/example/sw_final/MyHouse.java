@@ -10,7 +10,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 
@@ -37,6 +36,7 @@ public class MyHouse implements Initializable{
             try {
                 createimge() ;
             } catch (FileNotFoundException e) {
+
 
             }
 

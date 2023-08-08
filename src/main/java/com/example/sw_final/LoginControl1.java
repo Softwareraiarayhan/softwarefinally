@@ -61,7 +61,6 @@ if(adminislogin())
 else  if (ownerislogin())
     NextPage.make("insert.fxml", "houses");
 else  if (tenentislogin())
-              // NextPage.make("Tenant.fxml", "Tenant Page");
                NextPage.make("tenantMainScreen.fxml", "Tenant Page");
 
                else {

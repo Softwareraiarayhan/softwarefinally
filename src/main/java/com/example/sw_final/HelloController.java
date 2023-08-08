@@ -13,12 +13,11 @@ import javax.swing.*;
 import java.io.File;
 
 public class HelloController {
-    public  static  int ownerid;
+    protected   static   int ownerid;
     String s1="Unvalied number";
 
     String temp;
     private String errorMassage="errorMassage";
-    public  static final String ERROR_MASSAGE ="errorMassage";
 
     @FXML
     private Button add2;
@@ -102,7 +101,6 @@ public class HelloController {
                 h.setBedroom(Integer.parseInt(bathroom2.getText()));
                 h.setNumberhouse(Integer.parseInt(numberHouse2.getText()));
 h.setIdOwner(ownerid);
-System.out.println(ownerid);
             Sakanat.house1.add(h);
                 JOptionPane.showMessageDialog(null, "done"+Sakanat.house1.get(0).getNumberhouse(), "correct", JOptionPane.PLAIN_MESSAGE);
 

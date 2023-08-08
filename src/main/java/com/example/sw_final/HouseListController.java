@@ -9,22 +9,11 @@ package com.example.sw_final;
         import java.io.FileNotFoundException;
         import java.net.URL;
         import java.util.ResourceBundle;
-        import javafx.fxml.FXML;
-        import javafx.fxml.Initializable;
-        import com.example.sw_final.Sakanat;
         import javafx.scene.control.Alert;
         import javafx.scene.control.Button;
-        import javafx.scene.control.Label;
-        import javafx.scene.image.Image;
-        import javafx.scene.image.ImageView;
-        import javafx.scene.layout.VBox;
-
         import javax.swing.*;
-        import java.io.FileInputStream;
-        import java.io.FileNotFoundException;
         import java.io.IOException;
-        import java.net.URL;
-        import java.util.ResourceBundle;
+
 
         import static com.example.sw_final.WelcomeControl.logger;
 public class HouseListController implements Initializable {
@@ -77,10 +66,10 @@ public class HouseListController implements Initializable {
             alert.setHeaderText(null);
             alert.setContentText("You have successfully booked a house.");
             alert.showAndWait();
-            AdminRequist Request = new AdminRequist();
-            Request.setUsername(tenantUsername);
-            Request.setHouseNum(houseNum);
-            Sakanat.request.add(Request);
+            AdminRequist request = new AdminRequist();
+            request.setUsername(tenantUsername);
+            request.setHouseNum(houseNum);
+            Sakanat.request.add(request);
             JOptionPane.showMessageDialog(null,Sakanat.request.get(0).getHouseNum() + Sakanat.request.get(0).getUsername() );
 
             try {

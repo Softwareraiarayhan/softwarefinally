@@ -3,8 +3,6 @@
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 j
 :src/test/java/com/example/SW_finalTest/acceptanceTest.java,2\5\251404d7689c7c83a577ef4de76e5312435ddbcc
-a
-1src/test/java/com/example/SW_finalTest/login.java,b\2\b26cbc46744969ef7c28c73037384ec9204ac474
 c
 3src/test/java/com/example/SW_finalTest/request.java,8\1\81041effb9f1a1d94b4e464e8039a37e05a7fd36
 h

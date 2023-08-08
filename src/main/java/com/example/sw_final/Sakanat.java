@@ -10,7 +10,8 @@ public class Sakanat {
     protected static final List<HouseClass> house1 = new ArrayList<>();
     protected   static final List<AdminClass> admin1 = new ArrayList<>();
     protected   static final List<OwnerClass> owner1 = new ArrayList<>();
-    protected   static final List<TenantClas> tenant1 = new ArrayList<>();
+    protected   static final List<TenantClass> tenant1 = new ArrayList<>();
+    protected   static final List<AdminRequist> request = new ArrayList<>();
 
     public Sakanat()
     {
@@ -18,6 +19,7 @@ public class Sakanat {
         addhouse();
         addowner();
         addtenant();
+        addrequest();
     }
 public static void addhouse()
 {
@@ -46,6 +48,35 @@ public static void addhouse()
     h2.setIdOwner(428678901);
     h2.setaccepted(true);
     house1.add(h2);
+
+
+
+    HouseClass h3=new HouseClass();
+    h3.setPicture("C:\\Users\\hp\\Desktop\\summer2023\\SW\\houses_picture\\house3.jpg");
+    h3.setServices("water,WIFI, maintainability");
+    h3.setLocation("next to 3al taree2 ");
+    h3.setPrice(Integer.parseInt("650"));
+    h3.setBalcony(Integer.parseInt("2"));
+    h3.setBedroom(Integer.parseInt("3"));
+    h3.setBathroom(Integer.parseInt("4"));
+    h3.setNumberhouse(Integer.parseInt("1234567"));
+    h3.setIdOwner(428678901);
+    h3.setaccepted(true);
+    house1.add(h3);
+
+    HouseClass h4=new HouseClass();
+    h4.setPicture("C:\\Users\\hp\\Desktop\\summer2023\\SW\\houses_picture\\house4.jpg");
+    h4.setServices("food ,water,WIFI");
+    h4.setLocation("al dowar");
+    h4.setPrice(Integer.parseInt("350"));
+    h4.setBalcony(Integer.parseInt("1"));
+    h4.setBedroom(Integer.parseInt("3"));
+    h4.setBedroom(Integer.parseInt("4"));
+    h4.setNumberhouse(Integer.parseInt("1111111"));
+    h4.setBathroom(Integer.parseInt("4"));
+    h4.setIdOwner(428678901);
+    h4.setaccepted(true);
+    house1.add(h4);
 }
 
 
@@ -83,25 +114,66 @@ public static void addhouse()
     }
     public void addtenant()
     {
-        TenantClas h1=new TenantClas();
+        TenantClass h1=new TenantClass();
         h1.setAge(20);
         h1.setid(425968711);
         h1.setGender("female");
-        h1.setPhonenumber(593646472);
+        h1.setPhoneNumber(593646472);
         h1.setPassword("98765**");
         h1.setUniversityMajors("CE");
         h1.setUsername("Salma abdullah");
+        h1.setBooked(true);
         tenant1.add(h1);
 
-        TenantClas h2=new TenantClas();
+        TenantClass h2=new TenantClass();
         h2.setAge(30);
         h2.setid(745895644);
         h2.setGender("male");
-        h2.setPhonenumber(595761287);
+        h2.setPhoneNumber(595761287);
         h2.setPassword("145236**");
         h2.setUniversityMajors("medicin");
         h2.setUsername("Ghaith abdullah");
+        h1.setBooked(false);
         tenant1.add(h2);
+
+
+        TenantClass t3=new TenantClass();
+        t3.setAge(24);
+        t3.setid(4322145);
+        t3.setGender("female");
+        t3.setPhoneNumber(598868402);
+        t3.setPassword("33");
+        t3.setUniversityMajors("Industrial Engineering");
+        t3.setUsername("Azhar");
+        t3.setBooked(false);
+        tenant1.add(t3);
+
+
+        TenantClass t4=new TenantClass();
+        t4.setAge(26);
+        t4.setid(123456);
+        t4.setGender("female");
+        t4.setPhoneNumber(598846622);
+        t4.setPassword("22");
+        t4.setUniversityMajors("electrical Engineering");
+        t4.setUsername("afnan");
+        t4.setBooked(true);
+        tenant1.add(t4);
+    }
+
+
+    public void addrequest()
+    {
+
+        AdminRequist h1=new AdminRequist();
+        h1.setHouseNum(1101230);
+        h1.setUsername("Salma abdullah");
+      request.add(h1);
+
+        AdminRequist h2=new AdminRequist();
+        h2.setHouseNum(1101180);
+        h2.setUsername("afnan");
+        request.add(h2);
     }
 
 

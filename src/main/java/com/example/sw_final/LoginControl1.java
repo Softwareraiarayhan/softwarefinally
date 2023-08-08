@@ -35,9 +35,20 @@ public static  final  boolean ADMINLOGIN=false;
 
    @FXML
    private  TextField username;
+    public String getUserlog() {
+        return userlog;
+    }
+
+    public void setUserlog(String userlog) {
+        LoginControl1.userlog = userlog;
+    }
+
+    public static String userlog;
 
 
-   @FXML
+
+
+    @FXML
 void  loginbutton(MouseEvent event) {
        try {
            if(username.getText().isEmpty()||password.getText().isEmpty())
@@ -50,7 +61,9 @@ if(adminislogin())
 else  if (ownerislogin())
     NextPage.make("insert.fxml", "houses");
 else  if (tenentislogin())
-    NextPage.make("Tenant.fxml", "Tenant Page");
+              // NextPage.make("Tenant.fxml", "Tenant Page");
+               NextPage.make("tenantMainScreen.fxml", "Tenant Page");
+
                else {
                    JOptionPane.showMessageDialog(null, "Please select one of radio button ", "Unvalid", JOptionPane.ERROR_MESSAGE);
                }
@@ -77,7 +90,12 @@ else  if (tenentislogin())
       if (ownerRadio.isSelected()) {
           TESTLOGIN.fun(2);
           if (TESTLOGIN.userNametest(username.getText()) && TESTLOGIN.passWordtest(password.getText()))
+          {
+              userlog = username.getText();
+              setUserlog( username.getText())  ;
               return true;
+
+          }
       }
       return  false;
   }
@@ -86,7 +104,11 @@ else  if (tenentislogin())
         if (tenantRadio.isSelected()) {
             TESTLOGIN.fun(3);
             if (TESTLOGIN.userNametest(username.getText()) && TESTLOGIN.passWordtest(password.getText()))
+            {
+                userlog = username.getText();
+                setUserlog( username.getText())  ;
                 return true;
+            }
         }
         return  false;
     }

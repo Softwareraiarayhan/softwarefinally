@@ -18,6 +18,7 @@ public class HelloController {
 
     String temp;
     private String errorMassage="errorMassage";
+    public  static final String ERROR_MASSAGE ="errorMassage";
 
     @FXML
     private Button add2;

@@ -1,6 +1,8 @@
 package com.example.sw_final;
 
 public class HouseClass {
+    private  int idOwner;
+
     private String picture;
     private String services;
     private String location;
@@ -12,7 +14,6 @@ public class HouseClass {
     private int numberTenant;
     private  boolean showed;
     private  boolean accepted;
-    private  int idOwner;
     public HouseClass()
     {
 

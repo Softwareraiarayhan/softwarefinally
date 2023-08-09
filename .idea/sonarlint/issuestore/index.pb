@@ -37,7 +37,5 @@ d
 4src/test/java/com/example/SW_finalTest/feature1.java,0\7\079a62d738573be09e2eadd6059b6381d6121b9b
 e
 5src/main/java/com/example/sw_final/LoginControl1.java,8\d\8d9ca14aa37a545b47e87416efef5d6a60280362
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 a
 1src/test/java/com/example/SW_finalTest/login.java,b\2\b26cbc46744969ef7c28c73037384ec9204ac474

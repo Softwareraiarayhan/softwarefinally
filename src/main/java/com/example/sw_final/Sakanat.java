@@ -12,6 +12,7 @@ String f="female";
     protected   static final List<OwnerClass> owner1 = new ArrayList<>();
     protected   static final List<TenantClass> tenant1 = new ArrayList<>();
     protected   static final List<AdminRequist> request = new ArrayList<>();
+    protected   static final List<Furniture> furniture = new ArrayList<>();
 
     public Sakanat()
     {
@@ -116,7 +117,6 @@ public static void addhouse()
         h1.setUsername("Salma abdullah");
         h1.setBooked(true);
         tenant1.add(h1);
-
         TenantClass h2=new TenantClass();
         h2.setAge(30);
         h2.setid(745895644);
@@ -157,7 +157,7 @@ public static void addhouse()
     {
 
         AdminRequist h1=new AdminRequist();
-        h1.setHouseNum(1234567);
+        h1.setHouseNum(1102230);
         h1.setUsername("Salma abdullah");
       request.add(h1);
 

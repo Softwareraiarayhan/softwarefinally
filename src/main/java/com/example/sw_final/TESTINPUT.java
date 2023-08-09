@@ -1,7 +1,14 @@
 package com.example.sw_final;
 
+import java.util.Date;
+
 public  class TESTINPUT {
     private TESTINPUT() {
+    }
+    public static boolean testDate(Date date, int lease ){
+        boolean valid= false;
+
+        return valid;
     }
 
     public static boolean priceTest(String price) {

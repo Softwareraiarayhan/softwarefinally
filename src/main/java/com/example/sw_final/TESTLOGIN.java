@@ -7,11 +7,13 @@ public class TESTLOGIN {
     public static   void fun(int x)
     {
         typeuser=x;
+
     }
-    private static   String x="user not found";
-    private    static  String y="incorrect";
+    private static  final   String x="user not found";
+    private    static final  String y="incorrect";
     private TESTLOGIN()
     {
+
     }
     protected  static boolean flag=true;
     public static boolean userNametest(String string2) {

@@ -24,13 +24,14 @@ public class HouseListController implements Initializable {
     private VBox houseContainer;
     private Button bookHouse;
     protected    static int houseNum;
+    public static  String IDOwner;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         populateHouses();
     }
     @FXML
-    private void bookButtonHandls() throws RuntimeException {
+    private void bookButtonHandls(int selectedHouseNum) throws RuntimeException {
 
         TenantClass tenantB = null;
 
@@ -127,8 +128,9 @@ public class HouseListController implements Initializable {
         Label servicesLabel = new Label("Services: " + house1.getServices());
         Label balconyLabel = new Label("Balcony: " + house1.getBalcony());
         Label bedroomLabel = new Label("Bedroom: " + house1.getBedroom());
+        Label ownerid = new Label("Owner: " + house1.getIdOwner());
         bookHouse = new Button("BOOK");
-        bookHouse.setOnAction(e -> bookButtonHandls());
+        bookHouse.setOnAction(e -> bookButtonHandls(house1.getIdOwner()));
         houseBox.getChildren().addAll(
                 imageView, houseNumberLabel, locationLabel, priceLabel,
                 servicesLabel, balconyLabel, bedroomLabel,bookHouse
